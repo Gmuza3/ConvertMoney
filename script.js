@@ -149,7 +149,7 @@ const gbpInGEL = () =>{
 
 const getCurrencyGEL = async () =>{
     try{
-        const result = await fetch('https://api.exchangerate-api.com/v4/latest/EUR');
+        const result = await fetch('https://api.exchangerate-api.com/v4/latest/GEL');
         const data = await result.json();
         if(!result.ok){
             const error =new Error(data.message);
