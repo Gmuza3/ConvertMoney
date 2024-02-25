@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div class="zone">
+        <div class="text-zone">
+        </div>
+        <button type="button">next</button>
+    </div> -->
+    <div class="container">
+        <div class="outer-container">
+            <div class="text-zone">
+                <h4 class="card-tittle">ვალუტის კურსები</h4>
+                <span>გადაახურდავე საუკეთესო პირობით</span>
+            </div>
+            <div class="inner-container">
+                <div class="buttons-container">
+                    <button class="curses" type="button">კურსები</button>
+                    <button class="calculator" type="button">კალკულატორი</button>
+                </div>
+            </div>
+            <div class="common-container">
+                <div class="left-side-container">
+                    <ul class="list">
+                        <li><img src="./Images/usd.svg" width="35px" alt="">USD</li>
+                        <li><img src="./Images/eur.svg" width="35px" alt="">EUR</li>
+                        <li><img src="./Images/gbp.svg" width="35px" alt="">GBP</li>
+                    </ul>
+                </div>
+                <div class="right-side-container">
+                    <div class="right-side-list">
+                        <div class="outer-list">
+                            <h5>კონვერტაცია ლარში</h5>
+                            <ul class="list-item">
+
+                            </ul>
+                        </div>
+                        <!-- <div class="outer-list">
+                            <h5>გაყიდვა</h5>
+                            <ul class="list-item">
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="" id="first-form">
+                <div class="input-wrapper">
+                    <input type="number" class="money-input" name="Convert">
+                    <label for="money-input" id="money">თანხა:</label>
+                </div>
+                <select name="list" id="lister">
+                    <option value="GEL">GEL</option>
+                    <!-- <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option> -->
+                </select>
+            </form>
+        </div>
+        <div class="form-another-container">
+            <form action=""  id="second-form">
+                <div class="input-wrapper-second">
+                    <input type="number" class="second-input" name="Convert" readonly>
+                    <label for="money-input" id="second-label"></label>
+                </div>
+                <select name="list" id="second-lister">
+                    <option value="USD">USD</option>
+                    <option value="GEL">GEL</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
