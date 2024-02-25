@@ -156,8 +156,8 @@ const getCurrencyGEL = async () =>{
             throw error;
         }
         convertMoney(data);
-        localStorage.setItem("test4",JSON.stringify(data));
-        const storeData4 = JSON.parse(localStorage.getItem("apiData"));
+        localStorage.setItem("GEL",JSON.stringify(data));
+        const storeData4 = JSON.parse(localStorage.getItem("GEL"));
         console.log(storeData4);
     }
     catch(error){
@@ -174,9 +174,9 @@ const getCurrencyUSD = async () =>{
             throw error;
         }
         eurInGel(data)
-        localStorage.setItem("test3",JSON.stringify(data));
-        const storeData3 = JSON.parse(localStorage.getItem("apiData"));
-        console.log(storeData3);
+        localStorage.setItem("USD",JSON.stringify(data));
+        const storeData3 = JSON.parse(localStorage.getItem("USD"));
+        console.log(storeData3)
     }
     catch(error){
         console.error(error)
@@ -191,8 +191,8 @@ const getCurrencyEUR = async () =>{
             throw error;
         }
         eurInGel(data)
-        localStorage.setItem("test2",JSON.stringify(data));
-        const storeData2 = JSON.parse(localStorage.getItem("apiData"));
+        localStorage.setItem("EUR",JSON.stringify(data));
+        const storeData2 = JSON.parse(localStorage.getItem("EUR"));
         console.log(storeData2);
     }
     catch(error){
@@ -207,12 +207,12 @@ const getCurrencyGBP = async () =>{
         const error = new Error(data.message)
         throw error;
     }
-    console.log(data)
-    console.log(result)
+    // console.log(data)
+    // console.log(result)
     eurInGel(data)
-    localStorage.setItem("test",JSON.stringify(data))
-    const srotedData = JSON.parse(localStorage.getItem("apiData"))
-    console.log(srotedData);
+    localStorage.setItem("GBP",JSON.stringify(data))
+    const storeData = JSON.parse(localStorage.getItem("GBP"))
+    console.log(storeData);
     }catch(error){
         console.error(error)
     }
