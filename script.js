@@ -148,20 +148,57 @@ const gbpInGEL = () =>{
 }
 
 const getCurrencyGEL = async () =>{
-    const result = await fetch('https://api.exchangerate-api.com/v4/latest/GEL');
-    const data = await result.json();
-    convertMoney(data);
+    try{
+        const result = await fetch('https://api.exchangerate-api.com/v4/latest/EUR');
+        const data = await result.json();
+        if(!result.ok){
+            const error =new Error(data.message);
+            throw error;
+        }
+        convertMoney(data);
+        localStorage.setItem("test4",JSON.stringify(data));
+        const storeData4 = JSON.parse(localStorage.getItem("apiData"));
+        console.log(storeData4);
+    }
+    catch(error){
+        console.error(error)
+    }
 }
 
 const getCurrencyUSD = async () =>{
-    const result = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-    const data = await result.json();
-    usdInGel(data);
+    try{
+        const result = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        const data = await result.json();
+        if(!result.ok){
+            const error =new Error(data.message);
+            throw error;
+        }
+        eurInGel(data)
+        localStorage.setItem("test3",JSON.stringify(data));
+        const storeData3 = JSON.parse(localStorage.getItem("apiData"));
+        console.log(storeData3);
+    }
+    catch(error){
+        console.error(error)
+    }
 }
 const getCurrencyEUR = async () =>{
-    const result = await fetch('https://api.exchangerate-api.com/v4/latest/EUR');
-    const data = await result.json();
-    eurInGel(data)
+    try{
+        const result = await fetch('https://api.exchangerate-api.com/v4/latest/EUR');
+        const data = await result.json();
+        if(!result.ok){
+            const error =new Error(data.message);
+            throw error;
+        }
+        eurInGel(data)
+        localStorage.setItem("test2",JSON.stringify(data));
+        const storeData2 = JSON.parse(localStorage.getItem("apiData"));
+        console.log(storeData2);
+    }
+    catch(error){
+        console.error(error)
+    }
+
 }
 const getCurrencyGBP = async () =>{
     try{const result = await fetch('https://api.exchangerate-api.com/v4/latest/GBP');
@@ -173,11 +210,11 @@ const getCurrencyGBP = async () =>{
     console.log(data)
     console.log(result)
     eurInGel(data)
-    // localStorage.setItem("test",JSON.stringify(data))
-    // const srotedData = JSON.parse(localStorage.getItem("apiData"))
-    // console.log(srotedData);
+    localStorage.setItem("test",JSON.stringify(data))
+    const srotedData = JSON.parse(localStorage.getItem("apiData"))
+    console.log(srotedData);
     }catch(error){
-        console.error(data.message)
+        console.error(error)
     }
 }
 
