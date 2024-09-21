@@ -175,8 +175,8 @@ button {
 #money {
   position: absolute;
   top: 28%;
-  left: 12%;
-  font-size: 17px;
+  left: 8%;
+  font-size: 16px;
   background-color: white;
   color: gray;
   z-index: 4;
@@ -201,7 +201,7 @@ button {
 #money.transition {
   position: absolute;
   top: -25%;
-  left: 8%;
+  left: 5%;
   z-index: 40;
   text-indent: 8px;
   font-size: 16px;
